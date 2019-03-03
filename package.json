@@ -1,6 +1,6 @@
 {
   "name": "@azhder/object-nav",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "object navigation",
   "main": "dist/index.js",
   "scripts": {
@@ -11,6 +11,17 @@
   },
   "author": "azder",
   "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azder/object-nav.git"
+  },
+  "bugs": {
+    "url": "https://github.com/azder/object-nav/issues"
+  },
+  "homepage": "https://github.com/azder/object-nav#readme",
   "devDependencies": {
     "@azhder/eslint-config-azder": "0.0.7",
     "@babel/cli": "^7.2.3",
@@ -23,8 +34,5 @@
     "jest": "^24.1.0",
     "nodemon": "^1.18.10"
   },
-  "dependencies": {},
-  "directories": {
-    "test": "test"
-  }
+  "dependencies": {}
 }
