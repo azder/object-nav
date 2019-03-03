@@ -1,7 +1,7 @@
 {
   "name": "@azhder/object-nav",
-  "version": "0.0.3",
-  "description": "object navigation",
+  "version": "0.0.4",
+  "description": "Safe navigation of object properties",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist --source-maps",

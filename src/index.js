@@ -2,18 +2,22 @@
 
 const VAL = Symbol();
 
-const nav = (
-    val => new Proxy(
-        Object.assign(() => void 0, {[VAL]: val}),
-        {
-            apply: tar => Reflect.has(tar, VAL) ? tar[VAL] : tar,
+const primitives = ['undefined', 'string', 'boolean', 'number', 'symbol'];
 
-            get: (tar, key) => {
-                tar = Reflect.has(tar, VAL) ? tar[VAL] : tar;
-                return nav(null === tar || void 0 === tar ? tar : tar[key]);
+const nav = (
+    val => null !== val && !primitives.includes(typeof val) && Reflect.has(val, VAL)
+        ? val
+        : new Proxy(
+            Object.assign(() => void 0, {[VAL]: val}),
+            {
+                apply: tar => Reflect.has(tar, VAL) ? tar[VAL] : tar,
+
+                get: (tar, key) => {
+                    tar = Reflect.has(tar, VAL) ? tar[VAL] : tar;
+                    return nav(null === tar || void 0 === tar ? tar : tar[key]);
+                }
             }
-        }
-    )
+        )
 );
 
 

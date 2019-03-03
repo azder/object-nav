@@ -20,11 +20,14 @@
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+  function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
   /** Created by azder on 2019-03-02. */
   var VAL = Symbol();
+  var primitives = ['undefined', 'string', 'boolean', 'number', 'symbol'];
 
   var nav = function nav(val) {
-    return new Proxy(Object.assign(function () {
+    return null !== val && !primitives.includes(_typeof(val)) && Reflect.has(val, VAL) ? val : new Proxy(Object.assign(function () {
       return void 0;
     }, _defineProperty({}, VAL, val)), {
       apply: function apply(tar) {

@@ -38,6 +38,19 @@ describe('nav', () => {
 
     });
 
+    it('flattens when called on nav function', () => {
+
+        const ob = {a: 1};
+        const n1 = nav(ob);
+        const n2 = nav(n1);
+        const n3 = nav(n2);
+
+        expect([ob, n1.a()]).toEqual([ob, ob.a]);
+        expect([ob, n2.a()]).toEqual([ob, ob.a]);
+        expect([ob, n3.a()]).toEqual([ob, ob.a]);
+
+    });
+
 });
 
 
