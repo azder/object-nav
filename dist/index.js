@@ -40,4 +40,6 @@
 
   var _default = nav;
   _exports.default = _default;
+  module.exports = exports.default;
+  module.exports.default = exports.default;
 });

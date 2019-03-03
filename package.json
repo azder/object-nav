@@ -1,8 +1,8 @@
 {
   "name": "@azhder/object-nav",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "object navigation",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist --source-maps",
     "dev": "babel src -d dist --watch",
@@ -18,6 +18,7 @@
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.4",
     "babel-jest": "^24.1.0",
+    "babel-plugin-add-module-exports": "^1.0.0",
     "eslint": "^5.15.0",
     "jest": "^24.1.0",
     "nodemon": "^1.18.10"

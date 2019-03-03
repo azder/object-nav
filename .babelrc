@@ -5,9 +5,17 @@
             {
                 "targets": {
                     "browsers": "> 1%",
-                    "node": "10"
+                    "node": "6"
                 },
                 "modules": "umd"
+            }
+        ]
+    ],
+    "plugins": [
+        [
+            "add-module-exports",
+            {
+                "addDefaultProperty": true
             }
         ]
     ]
