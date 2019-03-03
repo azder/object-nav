@@ -23,9 +23,9 @@ import nav from '@azhder/object-nav';
 
 Note: 
 
-`@azhder/object-nav` points to `'@azhder/object-nav/dist`
+`@azhder/object-nav` points to `@azhder/object-nav/dist`
 which is Babel transpiled version of the ES2018 source at
-`'@azhder/object-nav/src`
+`@azhder/object-nav/src`
 
 
 ## Use
