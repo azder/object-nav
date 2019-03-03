@@ -1,0 +1,29 @@
+{
+  "name": "@azhder/object-nav",
+  "version": "0.0.1",
+  "description": "object navigation",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "babel src -d dist --source-maps",
+    "dev": "babel src -d dist --watch",
+    "test": "jest",
+    "one": "nodemon --exec babel-node $1"
+  },
+  "author": "azder",
+  "license": "MIT",
+  "devDependencies": {
+    "@azhder/eslint-config-azder": "0.0.7",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "babel-jest": "^24.1.0",
+    "eslint": "^5.15.0",
+    "jest": "^24.1.0",
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {},
+  "directories": {
+    "test": "test"
+  }
+}
